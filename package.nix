@@ -31,6 +31,6 @@ stdenvNoCC.mkDerivation {
     homepage = "https://unblast.com/kollektif-sans-typeface/";
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.all;
-    maintainers = [ "elias-ainsworth" ];
+    maintainers = [ ];
   };
 }

@@ -3,7 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    systems.url = "github:nixos/nixpkgs/nixos-unstable";
+    systems.url = "github:nix-systems/default";
   };
   outputs =
     {
@@ -19,7 +19,7 @@
     in
     {
       packages = forEachSystem (pkgs: rec {
-        kollektif = pkgs.callPackage ./package.nix;
+        kollektif = pkgs.callPackage ./package.nix { };
         default = kollektif;
       });
     };
